@@ -8,7 +8,7 @@ import "fmt"
 func main() {
 	arr := [5]int{12, 34, 23, 56, 34}
 
-	for i := range arr {
-		fmt.Println(i)
+	for _, value := range arr {
+		fmt.Println(value)
 	}
 }
