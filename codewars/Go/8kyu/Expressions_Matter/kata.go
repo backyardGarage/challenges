@@ -1,32 +1,28 @@
 package kata
 
 func ExpressionMatter(a int, b int, c int) int {
-	var arr [3]int = [3]int{a, b, c}
-	var max int = 0
+	var x1 int = a * b * c
+	var x2 int = a + b + c
+	var x3 int = a*b + c
+	var x4 int = a * (b + c)
+	var x5 int = a + (b * c)
+	var x6 int = (a + b) * c
 
-	for i := 0; i < 3; i++ {
-		var count int = 0
-		if arr[i] == 1 {
-			count := count + 1
-			return count
-		}
-		if count == 3 {
-			max = a + b + c
-			return max
-		}
+	var arr [6]int = [6]int{x1, x2, x3, x4, x5, x6}
+	var i, j int
+	var key int
 
-		if count == 2 || count == 1 {
-			if (a+b)*c-(a+(b*c)) >= 0 {
-				return (a + b) * c
+	for i = 1; i < 6; i++ {
+		key = arr[i]
+
+		for j = i - 1; j >= 0; j-- {
+			if arr[j] > key {
+				arr[j+1] = arr[j]
+			} else {
+				break
 			}
-		} else {
-			return a * (b + c)
 		}
-
-		if count == 0 {
-			max = a * b * c
-			return max
-		}
+		arr[j+1] = key
 	}
-	return max
+	return arr[5]
 }
