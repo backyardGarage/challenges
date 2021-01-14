@@ -1,24 +1,11 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-type MyString string
-
-func (s MyString) IsUpperCase() bool {
-
-	var arrUpper string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	var space string = " "
-	var a = strings.Contains(string(s), arrUpper)
-	var b = strings.Contains(string(s), space)
-
-	return b && a
-}
+import "fmt"
 
 func main() {
-	s := "Hello"
-	t := MyString.IsUpperCase(MyString(s))
-	fmt.Println(t)
+	a := 365   // 10진수
+	b := 0555  // 8진수
+	c := 0x16D // 16진수
+
+	fmt.Println(a, b, c)
 }
