@@ -3,9 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	a := 365   // 10진수
-	b := 0555  // 8진수
-	c := 0x16D // 16진수
+	asciiStr := "ABC"
+	asciiBytes := []byte(asciiStr)
 
-	fmt.Println(a, b, c)
+	fmt.Printf("OK: string=%v, bytes=%v\n", asciiStr, asciiBytes)
+	fmt.Printf("OK: byte(A)=%v\n", asciiBytes[0])
+
+	// OK: string=ABC, bytes=[65 66 67]
+	// OK: byte(A)=65
 }
