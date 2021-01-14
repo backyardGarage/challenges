@@ -1,24 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-type MyString string
-
-func (s MyString) IsUpperCase() bool {
-
-	var arrUpper string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	var space string = " "
-	var a = strings.Contains(string(s), arrUpper)
-	var b = strings.Contains(string(s), space)
-
-	return b && a
-}
+import "fmt"
 
 func main() {
-	s := "Hello"
-	t := MyString.IsUpperCase(MyString(s))
-	fmt.Println(t)
+	asciiStr := "ABC"
+	asciiBytes := []byte(asciiStr)
+
+	fmt.Printf("OK: string=%v, bytes=%v\n", asciiStr, asciiBytes)
+	fmt.Printf("OK: byte(A)=%v\n", asciiBytes[0])
+
+	// OK: string=ABC, bytes=[65 66 67]
+	// OK: byte(A)=65
 }
