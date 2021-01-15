@@ -13,6 +13,12 @@ func main() {
 }
 */
 
+/*
+	for i, c := range "startTrek" {
+		fmt.Println(i, c)
+	}
+ */
+
 type MyString string
 
 func (s MyString) IsUpperCase() bool {
