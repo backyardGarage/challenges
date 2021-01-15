@@ -11,12 +11,11 @@ func main() {
 	// OK: string=ABC, bytes=[65 66 67]
 	// OK: byte(A)=65
 }
- */
+*/
 
 type MyString string
 
 func (s MyString) IsUpperCase() bool {
-
 
 }
 
