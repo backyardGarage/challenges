@@ -1,14 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type MyString string
 
 func main() {
-	asciiStr := "ABC"
-	asciiBytes := []byte(asciiStr)
+		MyString("StartTrek").IsUpperCase()
+}
 
-	fmt.Printf("OK: string=%v, bytes=%v\n", asciiStr, asciiBytes)
-	fmt.Printf("OK: byte(A)=%v\n", asciiBytes[0])
-
-	// OK: string=ABC, bytes=[65 66 67]
-	// OK: byte(A)=65
+func (s MyString) IsUpperCase() bool {
+	var t bool = true
+	for _, c := range s {
+		if c >= 97 && c <= 122 {
+			t = false
+			return t
+		}
+	}
+	return t
 }
