@@ -1,30 +1,25 @@
 package main
 
-/*
-func main() {
-	asciiStr := "ABC"
-	asciiBytes := []byte(asciiStr)
-
-	fmt.Printf("OK: string=%v, bytes=%v\n", asciiStr, asciiBytes)
-	fmt.Printf("OK: byte(A)=%v\n", asciiBytes[0])
-
-	// OK: string=ABC, bytes=[65 66 67]
-	// OK: byte(A)=65
-}
-*/
-
-/*
-	for i, c := range "startTrek" {
-		fmt.Println(i, c)
-	}
- */
+import (
+	"fmt"
+	"strconv"
+)
 
 type MyString string
 
-func (s MyString) IsUpperCase() bool {
-
+func main() {
+		MyString("StartTrek").IsUpperCase()
 }
 
-func main() {
-
+func (s MyString) IsUpperCase() bool {
+	var o bool = true
+	var s string
+	for i, c := range s {
+		v,_ := fmt.Println(i, c)
+		v,_ = strconv.Atoi(string(v))
+		if v >= 65 && v <= 90 {
+			s:=fmt.Sprint(o)
+		}
+		return s
+	}
 }
