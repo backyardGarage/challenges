@@ -1,13 +1,9 @@
 package main
 
-import (
-	"fmt"
-)
-
 type MyString string
 
 func main() {
-		MyString("StartTrek").IsUpperCase()
+	MyString("StartTrek").IsUpperCase()
 }
 
 func (s MyString) IsUpperCase() bool {
