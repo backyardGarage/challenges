@@ -14,20 +14,27 @@ Vowels are any of aeiou.
 // 만약 모음이 아닐 경우, 비교대상 인덱스를 증가시킴
 
 // 해야할 일 -> 입력받은 문자열을 슬라이스에 집어넣기
+
+// ascii code
+// a = 64, e = 68, i = 72, o = 78, u = 84
+
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 func Solve(s string) int {
-	s = strings.ToLower(s)
-	fmt.Printf("%s", s)
-
+	a := make([]uint8, len(s))
+	b := make([]uint8, len(s))
+	for i:=0; i<len(s); i++ {
+		b[i] = a[i]
+		fmt.Println(b)
+		if b[i] == 64 || b[i] == 68 || b[i] == 72 || b[i] == 78 || b[i] == 84  {
+			fmt.Printf("%d", i)
+		}
+	}
 	return 0
 }
 
 func main() {
-	Solve("codewarriors")
+	Solve("aeiou")
 }
