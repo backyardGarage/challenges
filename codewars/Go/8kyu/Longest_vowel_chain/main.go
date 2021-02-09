@@ -13,18 +13,24 @@ Vowels are any of aeiou.
 // 연속모음 카운터 변수를 증가시킴.
 // 만약 모음이 아닐 경우, 비교대상 인덱스를 증가시킴
 
-// 해야할 일 -> 입력받은 문자열을 슬라이스에 집어넣기
+// TODO 입력받은 문자열을 슬라이스에 집어넣기
+// ANSWER below converts string to []string
+// a := strings.Split(s, "")
 
 // ascii code
 // a = 64, e = 68, i = 72, o = 78, u = 84
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func Solve(s string) int {
-	a := make([]uint8, len(s))
-	b := make([]uint8, len(s))
+	a := strings.Split(s, "")
+	// (a e i o u)
+	/*
 	for i:=0; i<len(s); i++ {
 		b[i] = a[i]
 		fmt.Println(b)
@@ -32,6 +38,8 @@ func Solve(s string) int {
 			fmt.Printf("%d", i)
 		}
 	}
+	 */
+	fmt.Println(a)
 	return 0
 }
 
